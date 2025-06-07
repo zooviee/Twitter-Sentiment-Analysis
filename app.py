@@ -1,23 +1,27 @@
 import streamlit as st
 import joblib
-import time
 import os
+import time
 
-model_path = "models/twitter_sentiment.sav"
+st.title('Twitter Sentiment Analysis')
 
-# Load the compressed model
+model = None
+model_path = os.path.join('models', 'twitter_sentiment.sav')
+
 if os.path.exists(model_path):
     model = joblib.load(model_path)
 else:
-    st.error("Model file not found. Please make sure it's in the 'models' folder.")
+    st.error("❌ Model file not found. Make sure 'twitter_sentiment.sav' is in the 'models' folder.")
+    st.stop()  # Stop the app if model isn't available
 
-# Streamlit interface
-st.title('Twitter Sentiment Analysis')
 tweet = st.text_input('Enter your tweet')
 
 if st.button('Predict'):
-    start = time.time()
-    prediction = model.predict([tweet])
-    end = time.time()
-    st.write('Prediction:', prediction[0])
-    st.write('Prediction time:', round(end - start, 2), 'seconds')
+    if not tweet.strip():
+        st.warning("⚠️ Please enter a tweet.")
+    else:
+        start = time.time()
+        prediction = model.predict([tweet])
+        end = time.time()
+        st.success(f"Prediction: {prediction[0]}")
+        st.write(f"⏱️ Prediction time: {round(end - start, 2)} seconds")
