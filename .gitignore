@@ -1,0 +1,32 @@
+# === Python Bytecode ===
+__pycache__/
+*.py[cod]
+*.pyo
+
+# === Virtual Environment ===
+venv/
+.venv/
+
+# === Model Files ===
+*.pkl
+*.joblib
+*.sav
+
+# === Logs ===
+*.log
+
+# === Jupyter Notebook Checkpoints ===
+.ipynb_checkpoints/
+
+# === OS-Specific Files ===
+.DS_Store
+Thumbs.db
+
+# === VS Code Settings ===
+.vscode/
+
+# === Cache & Temp Files ===
+.cache/
+*.tmp
+*.bak
+
