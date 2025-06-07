@@ -27,21 +27,28 @@ This project is a machine learning-powered web app that analyzes the sentiment o
 └── .gitignore
 
 📦 How to Run Locally
-# Clone the repo
+## Clone the repo
 git clone https://github.com/yourusername/twitter-sentiment-streamlit.git
 cd twitter-sentiment-streamlit
 
-# Create and activate a virtual environment
+## Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate    # On Windows: venv\Scripts\activate
 
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# Launch Streamlit app
+## Launch Streamlit app
 streamlit run app.py
 
-☁️ Deploy on Streamlit Cloud
+## 🌐 Live App
+
+Try the app here 👉 [Twitter Sentiment Streamlit App](https://zooviee-twitter-sentiment-streamlit-app-wf8th0.streamlit.app/)
+
+[![View App](https://img.shields.io/badge/Live%20App-Streamlit-green?logo=streamlit)](https://zooviee-twitter-sentiment-streamlit-app-wf8th0.streamlit.app/)
+
+
+## ☁️ Deploy on Streamlit Cloud
 
 To deploy this app:
 
